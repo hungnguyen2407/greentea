@@ -2,7 +2,7 @@
 <h1 align="center">Green Tea</h1>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/hungnguyen2407/greentea.svg?branch=develop" alt="Build Status"></a>
+<a href="https://travis-ci.org/hungnguyen2407/greentea.svg?branch=master"><img src="https://travis-ci.org/hungnguyen2407/greentea.svg?branch=master" alt="Build"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
