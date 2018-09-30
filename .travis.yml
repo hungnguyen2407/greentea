@@ -5,3 +5,6 @@ php:
 
 before_script:
 - composer require "laravelcollective/html":"^5.4.0"
+- php artisan config:clear
+- php artisan cache:clear
+- php artisan config:cache
