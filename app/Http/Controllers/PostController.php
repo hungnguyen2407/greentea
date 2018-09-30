@@ -38,7 +38,7 @@ class PostController extends Controller
         $post = new Post;
         $post->user_id = $request->user_id;
         $post->title = $request->title;
-        $post->content = $request->content;
+        $post->content = $request->postContent;
         if ($request->hasFile('file')) {
             $file = $request->file('file');
             $post->file = $file->hashName();
