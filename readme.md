@@ -20,7 +20,7 @@ If you want to with us. Please inbox to this email address:
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [14130047@st.hcmuaf.edu.vn](mailto:14130047@st.hcmuaf.edu.vn). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Green Tea site, please send an e-mail to Hung Nguyen via [14130047@st.hcmuaf.edu.vn](mailto:14130047@st.hcmuaf.edu.vn). All security vulnerabilities will be promptly addressed.
 
 ## License
 
