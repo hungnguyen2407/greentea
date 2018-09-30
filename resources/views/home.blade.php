@@ -14,6 +14,18 @@
                 </div>
             </div>
         @endif
+        @if (session('error'))
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="alert alert-danger" role="alert">
+                        {{ session('error') }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        @endif
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card shadow-sm">
@@ -28,7 +40,7 @@
                             <div class="form-group">
                                 {!! Form::hidden('user_id', auth()->user()->id) !!}
                                 {!! Form::text('title', null, ['class' => 'form-control']) !!}
-                                {!! Form::textarea('content', null, ['class' => 'form-control', 'rows' => '5']) !!}
+                                {!! Form::textarea('postContent', null, ['class' => 'form-control', 'rows' => '5']) !!}
                                 {!! Form::file('file', null, ['class' => 'form-control']) !!}
                             </div>
                             <div class="form-group">

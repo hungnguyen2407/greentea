@@ -38,16 +38,21 @@ class PostController extends Controller
         $post = new Post;
         $post->user_id = $request->user_id;
         $post->title = $request->title;
-        $post->content = $request->content;
+        $post->content = $request->postContent;
+
+        if (is_null($request->postContent) || is_null($request->title))
+            return redirect()->route('home')->with('error', trans('post.missingField'));
+
         if ($request->hasFile('file')) {
             $file = $request->file('file');
             $post->file = $file->hashName();
             $file->store('/uploads/');
         };
 
-        $post->save();
-
-        return redirect()->route('home')->with('status', 'Post Success.');
+        if ($post->save())
+            return redirect()->route('home')->with('status', trans('post.success'));
+        else
+            return redirect()->route('home')->with('error', trans('post.failure'));
     }
 
     /**
