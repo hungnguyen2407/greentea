@@ -67,7 +67,7 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a href="{{ route('users.show', ['user' => auth()->user()->id]) }}"
+                                <a href="{{ route('user.show', ['user' => auth()->user()->id]) }}"
                                    class="dropdown-item">
                                     <i class="fas fa-user"></i>
                                     {{ __('Account') }}

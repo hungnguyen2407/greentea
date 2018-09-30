@@ -29,12 +29,12 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card shadow-sm">
-                    <div class="card-header">Post</div>
                     @guest
                         <div class="card-body">
                             Welcome, You need to login to use the site.
                         </div>
                     @else
+                        <div class="card-header">Post</div>
                         <div class="card-body">
                             {!! Form::open(['method'=>'POST', 'action' => 'PostController@store', 'files' => true]) !!}
                             <div class="form-group">
