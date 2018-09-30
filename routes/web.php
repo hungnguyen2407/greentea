@@ -17,9 +17,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('home', 'HomeController@index');
+Route::get('home', 'HomeController@index')->name('home');
 Route::get('admin', function () {
     return view('admin.index');
 });
 Route::resource('user', 'UsersController');
 Route::resource('admin/users', 'Admin\UsersController');
+Route::resource('post', 'PostController');
+Route::get('post/download/{file}', 'PostController@download')->name('post.download');
+
+/**
+ * Download file route handle
+ */
+Route::get('file/{file}', function ($file) {
+    return response()->download(storage_path('app/uploads/' . $file));
+});

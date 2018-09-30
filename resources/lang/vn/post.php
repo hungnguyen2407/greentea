@@ -1,10 +1,16 @@
 <?php
+/**
+ * Created by IntelliJ IDEA.
+ * User: hungnguyen
+ * Date: 9/30/18
+ * Time: 10:55 PM
+ */
 
 return [
 
     /*
     |--------------------------------------------------------------------------
-    | Authentication Language Lines
+    | Post Language Lines
     |--------------------------------------------------------------------------
     |
     | The following language lines are used during authentication for various
@@ -12,7 +18,8 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-    'success' => 'Login success',
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+
+    'success' => 'Đăng thành công.',
+    'failure' => 'Đăng thất bại.',
+    'missingField' => 'Hãy điền hết các trường'
 ];

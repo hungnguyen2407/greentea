@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by IntelliJ IDEA.
+ * User: hungnguyen
+ * Date: 9/30/18
+ * Time: 10:44 PM
+ */
 
 return [
 
@@ -12,7 +18,7 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-    'success' => 'Login success',
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'success' => 'Đăng nhập thành công',
+    'failed' => 'Thông tin đăng nhập không chính xác.',
+    'throttle' => 'Đăng nhập sai quá nhiều. Vui lòng thử lại sau :seconds giây.',
 ];
