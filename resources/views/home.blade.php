@@ -28,7 +28,7 @@
                             <div class="form-group">
                                 {!! Form::hidden('user_id', auth()->user()->id) !!}
                                 {!! Form::text('title', null, ['class' => 'form-control']) !!}
-                                {!! Form::textarea('content', null, ['class' => 'form-control', 'rows' => '5']) !!}
+                                {!! Form::textarea('postContent', null, ['class' => 'form-control', 'rows' => '5']) !!}
                                 {!! Form::file('file', null, ['class' => 'form-control']) !!}
                             </div>
                             <div class="form-group">
