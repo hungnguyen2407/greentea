@@ -1,8 +1,11 @@
 <p align="center"><img src="https://res.cloudinary.com/dtdk9ua19/image/upload/v1538288770/green-tea-co/green-tea-logo.svg" data-canonical-src="https://res.cloudinary.com/dtdk9ua19/image/upload/v1538288770/green-tea-co/green-tea-logo.svg" width="100"></p>
 <h1 align="center">Green Tea</h1>
 
+<p align="center">
 [![Build Status](https://travis-ci.org/hungnguyen2407/greentea.svg?branch=master)](https://travis-ci.org/hungnguyen2407/greentea)
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
+
 ## About Green Tea
 
 Green Tea is a small social networking website using [Laravel](https://laravel.com/) framework.
