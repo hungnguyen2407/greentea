@@ -1,4 +1,4 @@
-<img align="center" src="https://res.cloudinary.com/dtdk9ua19/image/upload/v1538288770/green-tea-co/green-tea-logo.svg" data-canonical-src="https://res.cloudinary.com/dtdk9ua19/image/upload/v1538288770/green-tea-co/green-tea-logo.svg" width="100">
+<p align="center"><img src="https://res.cloudinary.com/dtdk9ua19/image/upload/v1538288770/green-tea-co/green-tea-logo.svg" data-canonical-src="https://res.cloudinary.com/dtdk9ua19/image/upload/v1538288770/green-tea-co/green-tea-logo.svg" width="100"></p>
 <h1 align="center">Green Tea</h1>
 
 [![Build Status](https://travis-ci.org/hungnguyen2407/greentea.svg?branch=master)](https://travis-ci.org/hungnguyen2407/greentea)
