@@ -11,6 +11,9 @@
 |
 */
 
+use App\User;
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('home');
 });
@@ -31,4 +34,23 @@ Route::get('post/download/{file}', 'PostController@download')->name('post.downlo
  */
 Route::get('file/{file}', function ($file) {
     return response()->download(storage_path('app/uploads/' . $file));
+});
+
+Route::get('/verify/{token}', function ($token) {
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param $token
+     * @return \Illuminate\Http\Response
+     */
+    $user = User::where('email_token', $token)->first();
+    if ($user == null) {
+        abort(404);
+    } else {
+        $user->is_active = 1;
+        $user->email_token = null;
+        if ($user->save()) {
+            return view('auth.email-confirm');
+        }
+    }
 });

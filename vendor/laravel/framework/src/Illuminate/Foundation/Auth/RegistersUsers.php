@@ -5,6 +5,7 @@ namespace Illuminate\Foundation\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Registered;
+use App\Jobs\SendVerificationEmail;
 
 trait RegistersUsers
 {
@@ -23,7 +24,7 @@ trait RegistersUsers
     /**
      * Handle a registration request for the application.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function register(Request $request)
@@ -32,10 +33,11 @@ trait RegistersUsers
 
         event(new Registered($user = $this->create($request->all())));
 
-        $this->guard()->login($user);
+        dispatch(new SendVerificationEmail($user));
 
-        return $this->registered($request, $user)
-                        ?: redirect($this->redirectPath());
+//        $this->guard()->login($user);
+
+        return view('auth.verification');
     }
 
     /**
@@ -51,8 +53,8 @@ trait RegistersUsers
     /**
      * The user has been registered.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  mixed  $user
+     * @param  \Illuminate\Http\Request $request
+     * @param  mixed $user
      * @return mixed
      */
     protected function registered(Request $request, $user)
