@@ -55,7 +55,7 @@
         </div>
         @guest
         @else
-            @foreach(auth()->user()->posts as $post)
+                @foreach(\App\Post::all() as $post)
                 <br>
                 <div class="row justify-content-center">
                     <div class="col-md-8">
